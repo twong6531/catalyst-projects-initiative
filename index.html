@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A clear public guide to Ventura's proposed Catalyst Projects Initiative." />
+  <title>Catalyst Projects Initiative | City of Ventura</title>
+  <style>
+    :root {
+      --ink: #17343b;
+      --ink-soft: #426069;
+      --paper: #f7f4ed;
+      --white: #fffdf8;
+      --sand: #e9dfcd;
+      --coral: #dc765f;
+      --coral-dark: #a94e43;
+      --sea: #2c7b78;
+      --sea-dark: #1e5f62;
+      --mint: #dce9df;
+      --line: rgba(23,52,59,.16);
+      --shadow: 0 18px 50px rgba(23,52,59,.10);
+      --radius: 18px;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
+      --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.55; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .shell { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { border-bottom: 1px solid var(--line); background: rgba(247,244,237,.88); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display:flex; align-items:center; gap: 12px; text-decoration:none; font-weight: 700; letter-spacing: -.02em; }
+    .seal { width: 34px; height: 34px; border: 2px solid var(--sea); border-radius: 50%; display:grid; place-items:center; color: var(--sea); font-family: var(--serif); font-size: 17px; }
+    nav { display:flex; gap: 26px; align-items:center; font-size: 14px; color: var(--ink-soft); }
+    nav a { text-decoration:none; }
+    nav a:hover, nav a:focus-visible { color: var(--coral-dark); }
+    .nav-cta { border: 1px solid var(--ink); border-radius: 999px; padding: 9px 15px; color: var(--ink); }
+    .nav-cta:hover { background: var(--ink); color: var(--white); }
+    .hero { padding: 88px 0 90px; position: relative; overflow:hidden; }
+    .hero:before { content:""; position:absolute; width: 520px; height: 520px; border-radius:50%; right:-230px; top:-260px; background: var(--mint); opacity:.78; }
+    .hero-grid { display:grid; grid-template-columns: 1.05fr .95fr; gap: 80px; align-items:center; position:relative; }
+    .eyebrow, .kicker { text-transform: uppercase; letter-spacing: .15em; font-size: 11px; font-weight: 800; color: var(--coral-dark); }
+    h1, h2, h3 { margin: 0; line-height: 1.03; letter-spacing: -.04em; }
+    h1 { font-family: var(--serif); font-size: clamp(54px, 7vw, 86px); font-weight: 500; max-width: 720px; }
+    .hero-copy { font-size: 19px; color: var(--ink-soft); max-width: 575px; margin: 27px 0 30px; }
+    .actions { display:flex; flex-wrap:wrap; gap: 12px; align-items:center; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height: 48px; padding: 0 19px; border-radius: 999px; text-decoration:none; font-weight: 700; font-size:14px; border: 1px solid transparent; cursor:pointer; }
+    .button-primary { background: var(--coral); color: #fffaf3; box-shadow: 0 8px 18px rgba(220,118,95,.25); }
+    .button-primary:hover, .button-primary:focus-visible { background: var(--coral-dark); }
+    .button-quiet { border-color: var(--line); background: var(--white); }
+    .button-quiet:hover, .button-quiet:focus-visible { border-color: var(--sea); color: var(--sea-dark); }
+    .hero-note { display:flex; align-items:center; gap:10px; margin-top:20px; color:var(--ink-soft); font-size:12px; }
+    .dot { width:8px; height:8px; border-radius:50%; background:var(--sea); box-shadow:0 0 0 5px rgba(44,123,120,.13); }
+    .route-card { background: var(--ink); color: var(--white); border-radius: 24px; padding: 25px; box-shadow: var(--shadow); transform: rotate(1.5deg); }
+    .route-card h2 { font-family: var(--serif); font-size: 31px; font-weight: 500; max-width: 320px; margin-bottom: 28px; }
+    .route-line { position:relative; padding-left: 34px; display:grid; gap: 21px; }
+    .route-line:before { content:""; position:absolute; left:8px; top:12px; bottom:12px; width:1px; background: rgba(255,255,255,.28); }
+    .route-step { position:relative; }
+    .route-step:before { content:""; position:absolute; left:-30px; top:6px; width:10px; height:10px; border-radius:50%; background: var(--coral); border: 3px solid var(--ink); box-shadow: 0 0 0 1px var(--coral); }
+    .route-step strong { display:block; font-size:13px; }
+    .route-step span { display:block; color: rgba(255,255,255,.68); font-size:12px; margin-top:3px; }
+    section { padding: 92px 0; border-top: 1px solid var(--line); }
+    .section-head { display:flex; justify-content:space-between; gap: 36px; align-items:end; margin-bottom: 42px; }
+    .section-head h2 { font-family: var(--serif); font-size: clamp(38px, 5vw, 61px); font-weight:500; max-width: 660px; }
+    .section-intro { max-width: 350px; color:var(--ink-soft); font-size:15px; }
+    .explain-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .explain { background: var(--white); padding: 28px; min-height: 250px; }
+    .explain:nth-child(2) { background: var(--mint); }
+    .explain:nth-child(3) { background: #f2e9d9; }
+    .number { font-family: var(--mono); font-size:12px; color:var(--coral-dark); }
+    .explain h3 { font-size:25px; margin: 38px 0 12px; }
+    .explain p { color: var(--ink-soft); margin:0; font-size:14px; }
+    .principles { display:grid; grid-template-columns: .9fr 1.1fr; gap:70px; align-items:start; }
+    .principles h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 62px); font-weight: 500; }
+    .principles-list { border-top: 1px solid var(--line); }
+    .principle { display:grid; grid-template-columns: 45px 1fr; gap: 14px; padding: 22px 0; border-bottom:1px solid var(--line); }
+    .principle b { font-family:var(--mono); color:var(--coral-dark); font-size:12px; padding-top:4px; }
+    .principle h3 { font-size:18px; letter-spacing:-.02em; margin-bottom:5px; }
+    .principle p { color:var(--ink-soft); margin:0; font-size:14px; }
+    .eligibility { background: var(--sea-dark); color: var(--white); }
+    .eligibility .section-head h2 { color: var(--white); }
+    .eligibility .section-intro { color:rgba(255,255,255,.72); }
+    .qualify-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .qualify { border: 1px solid rgba(255,255,255,.22); padding: 23px; border-radius: var(--radius); background: rgba(255,255,255,.06); }
+    .qualify h3 { font-size:20px; margin: 0 0 8px; }
+    .qualify p { margin:0; color:rgba(255,255,255,.72); font-size:14px; }
+    .qualify .tag { display:inline-block; color: #f5d2a4; font-family:var(--mono); font-size:11px; margin-bottom:24px; }
+    .timeline { display:grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
+    .phase { padding: 23px 20px 0 0; border-right: 1px solid var(--line); margin-right: 20px; }
+    .phase:last-child { border-right:0; margin-right:0; }
+    .phase .time { color:var(--coral-dark); font-family:var(--mono); font-size:11px; font-weight:700; }
+    .phase h3 { font-size:20px; margin: 19px 0 9px; }
+    .phase p { color:var(--ink-soft); font-size:14px; margin:0; }
+    .phase small { display:block; margin-top:18px; color:var(--sea-dark); font-size:12px; font-weight:700; }
+    .measure-wrap { display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:start; }
+    .measure-wrap h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 60px); font-weight:500; }
+    .measure-table { width:100%; border-collapse:collapse; font-size:14px; }
+    .measure-table th, .measure-table td { text-align:left; padding: 15px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+    .measure-table th { color:var(--ink-soft); font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .measure-table td:last-child { color:var(--sea-dark); font-weight:700; }
+    .faq { max-width: 850px; }
+    details { border-top:1px solid var(--line); padding: 19px 0; }
+    details:last-child { border-bottom:1px solid var(--line); }
+    summary { cursor:pointer; list-style:none; font-weight:700; display:flex; justify-content:space-between; gap:20px; }
+    summary::-webkit-details-marker { display:none; }
+    summary:after { content:'+'; color:var(--coral-dark); font-size:22px; font-weight:400; line-height:1; }
+    details[open] summary:after { content:'−'; }
+    details p { color:var(--ink-soft); max-width:700px; margin:12px 0 0; font-size:14px; }
+    .closing { background: var(--coral); color: #fffaf3; border:0; }
+    .closing-grid { display:flex; justify-content:space-between; align-items:end; gap: 40px; }
+    .closing h2 { font-family:var(--serif); font-size:clamp(40px, 5vw, 66px); font-weight:500; max-width:700px; }
+    .closing p { max-width:350px; margin: 17px 0 0; color:rgba(255,250,243,.82); }
+    .closing .button { background:var(--ink); color:var(--white); }
+    footer { padding: 25px 0 35px; color:var(--ink-soft); font-size:12px; }
+    .footer-row { display:flex; justify-content:space-between; gap:20px; }
+    .footer-row a { color:var(--ink); font-weight:700; }
+    .reveal { opacity:0; transform:translateY(15px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+    @media (max-width: 800px) {
+      .shell { width:min(100% - 32px, 600px); }
+      .topbar-inner { min-height:64px; }
+      nav a:not(.nav-cta) { display:none; }
+      .hero { padding:65px 0 70px; }
+      .hero-grid, .principles, .measure-wrap { grid-template-columns:1fr; gap:42px; }
+      .route-card { transform:none; }
+      section { padding:68px 0; }
+      .section-head, .closing-grid { display:block; }
+      .section-intro { margin-top:20px; }
+      .explain-grid, .qualify-grid { grid-template-columns:1fr; }
+      .explain { min-height:unset; }
+      .timeline { grid-template-columns:1fr 1fr; gap:28px 0; border-top:0; }
+      .phase { border-top:1px solid var(--ink); padding-top:20px; }
+      .phase:nth-child(2) { border-right:0; }
+      .phase:nth-child(3) { border-bottom:0; }
+      .closing .button { margin-top:25px; }
+      .footer-row { display:block; }
+      .footer-row span { display:block; margin-top:8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .reveal { opacity:1; transform:none; transition:none; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#top" aria-label="Catalyst Projects Initiative home"><span class="seal">V</span><span>City of Ventura<br><small style="font-weight:500;color:var(--ink-soft)">Catalyst Projects Initiative</small></span></a>
+      <nav aria-label="Main navigation"><a href="#why">Why it matters</a><a href="#process">How it works</a><a href="#measure">Accountability</a><a class="nav-cta" href="#contact">Talk with the City</a></nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow">A clearer path for high-impact projects</div>
+          <h1>Good projects should not get lost in the process.</h1>
+          <p class="hero-copy">Ventura's Catalyst Projects Initiative is a proposed, coordinated way to help significant development, business expansion, redevelopment, and investment projects move through City Hall with clarity—without skipping public review or community priorities.</p>
+          <div class="actions"><a class="button button-primary" href="#process">See the process <span aria-hidden="true" style="margin-left:8px">↓</span></a><a class="button button-quiet" href="#eligibility">Who qualifies?</a></div>
+          <div class="hero-note"><span class="dot"></span>Designed to be practical within the City's existing capacity</div>
+        </div>
+        <aside class="route-card" aria-label="The proposed project route">
+          <div class="kicker" style="color:#f5d2a4">The proposed route</div>
+          <h2>One front door. Shared milestones. No shortcuts.</h2>
+          <div class="route-line">
+            <div class="route-step"><strong>01 / Identify</strong><span>Confirm a project is a good fit for Catalyst support.</span></div>
+            <div class="route-step"><strong>02 / Coordinate</strong><span>Connect the project with one City point of contact.</span></div>
+            <div class="route-step"><strong>03 / Move</strong><span>Align departments around a visible review path.</span></div>
+            <div class="route-step"><strong>04 / Learn</strong><span>Track results and improve the system over time.</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="shell">
+        <div class="section-head reveal"><h2>Make the City easier to navigate—while keeping the public process intact.</h2><p class="section-intro">The initiative responds to a simple tension: valuable projects need speed and certainty, while Ventura needs review, transparency, and accountability.</p></div>
+        <div class="explain-grid reveal">
+          <article class="explain"><span class="number">01 / CLARITY</span><h3>One front door</h3><p>A designated City contact helps project teams understand who is involved, what information is needed, and where to go next.</p></article>
+          <article class="explain"><span class="number">02 / COORDINATION</span><h3>One shared path</h3><p>Departments coordinate key reviews, surface conflicts earlier, and use milestones that make progress visible to everyone.</p></article>
+          <article class="explain"><span class="number">03 / TRUST</span><h3>One accountable record</h3><p>Projects receive clearer expectations—not a free pass. Public requirements, decision authority, and community input remain visible.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell principles">
+        <div class="reveal"><div class="eyebrow">The guardrails</div><h2>Faster does not mean less careful.</h2></div>
+        <div class="principles-list reveal">
+          <div class="principle"><b>01</b><div><h3>Same rules, better coordination</h3><p>Expedited coordination can reduce avoidable delay without waiving environmental, safety, zoning, building, or public-hearing requirements.</p></div></div>
+          <div class="principle"><b>02</b><div><h3>Clear eligibility, not special favors</h3><p>Projects should qualify based on published criteria such as investment, jobs, redevelopment, strategic fit, or meaningful community benefit.</p></div></div>
+          <div class="principle"><b>03</b><div><h3>Milestones are targets, not promises to approve</h3><p>The City can commit to communication, coordination, and predictable handoffs while preserving the authority of each review and decision-maker.</p></div></div>
+          <div class="principle"><b>04</b><div><h3>Measure what improves</h3><p>Ventura should track time, rework, project outcomes, and participant experience—then adjust the framework based on evidence.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eligibility" class="eligibility">
+      <div class="shell">
+        <div class="section-head reveal"><h2>Who is the Catalyst lane for?</h2><p class="section-intro">Catalyst support is meant for projects with the potential to create substantial public value—not only for one preferred industry.</p></div>
+        <div class="qualify-grid reveal">
+          <article class="qualify"><span class="tag">QUALIFYING SIGNAL 01</span><h3>Investment & jobs</h3><p>New or expanded activity that brings meaningful private investment, quality jobs, or a stronger local economic base.</p></article>
+          <article class="qualify"><span class="tag">QUALIFYING SIGNAL 02</span><h3>Place-based revitalization</h3><p>Redevelopment or adaptive reuse that helps activate an underused site, corridor, district, or strategic area.</p></article>
+          <article class="qualify"><span class="tag">QUALIFYING SIGNAL 03</span><h3>Community benefit</h3><p>A project that advances public priorities through services, amenities, infrastructure, housing, sustainability, or other measurable benefits.</p></article>
+          <article class="qualify"><span class="tag">QUALIFYING SIGNAL 04</span><h3>Strategic fit</h3><p>Projects may connect to Ventura's business strengths—from healthcare and technology to advanced manufacturing, the port, and the blue economy.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="shell">
+        <div class="section-head reveal"><h2>A practical path from first conversation to measurable result.</h2><p class="section-intro">The first version can launch as a lightweight playbook, using existing staff coordination before new technology or major funding is required.</p></div>
+        <div class="timeline reveal">
+          <article class="phase"><span class="time">0–3 MONTHS</span><h3>Screen & scope</h3><p>Receive a project intake, test eligibility, name a lead contact, and identify the departments and outside partners involved.</p><small>Output: Catalyst project brief</small></article>
+          <article class="phase"><span class="time">3–6 MONTHS</span><h3>Align the route</h3><p>Hold a cross-department kickoff, create a review map, identify information gaps, and set target milestones.</p><small>Output: shared action plan</small></article>
+          <article class="phase"><span class="time">6–12 MONTHS</span><h3>Coordinate review</h3><p>Maintain regular check-ins, track handoffs, communicate decisions and next steps, and escalate blockers when needed.</p><small>Output: visible status record</small></article>
+          <article class="phase"><span class="time">12+ MONTHS</span><h3>Evaluate & improve</h3><p>Compare baseline and Catalyst projects, gather feedback, and recommend what should become a standard City practice.</p><small>Output: annual performance readout</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="measure">
+      <div class="shell measure-wrap">
+        <div class="reveal"><div class="eyebrow">Accountability by design</div><h2>If it matters, the City should be able to see it.</h2></div>
+        <div class="reveal"><table class="measure-table"><thead><tr><th>What to track</th><th>Why it matters</th></tr></thead><tbody><tr><td>Time between key handoffs</td><td>Find avoidable delay</td></tr><tr><td>Projects with a named contact</td><td>Confirm the system is working</td></tr><tr><td>Incomplete or repeated submittals</td><td>Reduce rework</td></tr><tr><td>Jobs, investment, or sites activated</td><td>Test economic outcomes</td></tr><tr><td>Applicant & staff experience</td><td>Improve the process fairly</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head reveal"><h2>Questions people may have.</h2><p class="section-intro">A clear program should make expectations easier to understand for project teams, residents, and City staff.</p></div>
+        <div class="faq reveal">
+          <details><summary>Does Catalyst status guarantee approval?</summary><p>No. Catalyst status would improve coordination and communication; it would not change the City's legal requirements, decision authority, or public process.</p></details>
+          <details><summary>Does every project in a priority industry qualify?</summary><p>No. Industry is one possible signal, not an automatic qualification. The program should stay flexible and focus on measurable economic or community benefit.</p></details>
+          <details><summary>What happens if a project gets stuck?</summary><p>The lead contact documents the blocker, brings the right departments together, and escalates unresolved issues through a defined internal path—without promising an outcome that the City cannot control.</p></details>
+          <details><summary>How could Ventura start without a large new budget?</summary><p>Begin with a published intake, a staff playbook, a named coordinator, recurring interdepartmental check-ins, and a simple status tracker. Technology and incentives can be added after the pilot proves where they create value.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="closing">
+      <div class="shell closing-grid"><div><div class="eyebrow" style="color:#ffe1b4">The opportunity</div><h2>Build a process that helps Ventura say “let’s figure this out.”</h2><p>The Catalyst Projects Initiative gives the City a practical starting point for turning high-potential projects into coordinated, accountable action.</p></div><a class="button" href="mailto:mhart@cityofventura.ca.gov?subject=Catalyst%20Projects%20Initiative">Contact Economic Development <span aria-hidden="true" style="margin-left:8px">↗</span></a></div>
+    </section>
+  </main>
+  <footer><div class="shell footer-row"><strong>City of Ventura · Catalyst Projects Initiative</strong><span>Concept site for the 2026–2027 Sunstone Economic Development Challenge · <a href="mailto:mhart@cityofventura.ca.gov">mhart@cityofventura.ca.gov</a></span></div></footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
