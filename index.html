@@ -73,6 +73,26 @@
     .number { font-family: var(--mono); font-size:12px; color:var(--coral-dark); }
     .explain h3 { font-size:25px; margin: 38px 0 12px; }
     .explain p { color: var(--ink-soft); margin:0; font-size:14px; }
+    .evidence-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .evidence-feature { background: var(--white); padding: 26px; min-height: 280px; }
+    .evidence-feature:nth-child(2) { background: var(--mint); }
+    .evidence-feature:nth-child(3) { background: #f2e9d9; }
+    .evidence-feature strong { display:block; font-family:var(--serif); font-size:60px; line-height:1; font-weight:500; margin:28px 0 13px; color:var(--coral-dark); }
+    .evidence-feature h3 { font-size:20px; letter-spacing:-.02em; }
+    .evidence-feature p { color:var(--ink-soft); font-size:14px; margin:12px 0 0; }
+    .evidence-bottom { display:grid; grid-template-columns: 1fr 1fr; gap:60px; margin-top:54px; align-items:start; }
+    .large-copy { font-family:var(--serif); font-size:30px; line-height:1.16; margin:15px 0 0; max-width:600px; }
+    .resident-list { border-top:1px solid var(--ink); }
+    .resident-list span { display:block; padding:14px 0; border-bottom:1px solid var(--line); color:var(--ink-soft); font-size:14px; }
+    .source-note { color:var(--ink-soft); font-size:11px; margin:35px 0 0; max-width:850px; }
+    .playbook { display:grid; grid-template-columns: .9fr 1.1fr; gap:70px; align-items:start; }
+    .playbook h2 { font-family:var(--serif); font-size:clamp(40px, 5vw, 60px); font-weight:500; }
+    .playbook .section-intro { margin-top:20px; }
+    .playbook-list { border-top:1px solid var(--line); }
+    .play { display:grid; grid-template-columns:45px 1fr; gap:14px; padding:22px 0; border-bottom:1px solid var(--line); }
+    .play > span { font-family:var(--mono); color:var(--coral-dark); font-size:12px; padding-top:4px; }
+    .play h3 { font-size:19px; letter-spacing:-.02em; margin-bottom:5px; }
+    .play p { color:var(--ink-soft); margin:0; font-size:14px; }
     .principles { display:grid; grid-template-columns: .9fr 1.1fr; gap:70px; align-items:start; }
     .principles h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 62px); font-weight: 500; }
     .principles-list { border-top: 1px solid var(--line); }
@@ -129,7 +149,8 @@
       section { padding:68px 0; }
       .section-head, .closing-grid { display:block; }
       .section-intro { margin-top:20px; }
-      .explain-grid, .qualify-grid { grid-template-columns:1fr; }
+      .explain-grid, .qualify-grid, .evidence-grid { grid-template-columns:1fr; }
+      .evidence-bottom, .playbook { grid-template-columns:1fr; gap:42px; }
       .explain { min-height:unset; }
       .timeline { grid-template-columns:1fr 1fr; gap:28px 0; border-top:0; }
       .phase { border-top:1px solid var(--ink); padding-top:20px; }
@@ -146,7 +167,7 @@
   <header class="topbar">
     <div class="shell topbar-inner">
       <a class="brand" href="#top" aria-label="Catalyst Projects Initiative home"><span class="seal">V</span><span>City of Ventura<br><small style="font-weight:500;color:var(--ink-soft)">Catalyst Projects Initiative</small></span></a>
-      <nav aria-label="Main navigation"><a href="#why">Why it matters</a><a href="#process">How it works</a><a href="#measure">Accountability</a><a class="nav-cta" href="#contact">Talk with the City</a></nav>
+      <nav aria-label="Main navigation"><a href="#why">Why it matters</a><a href="#evidence">What Ventura heard</a><a href="#process">How it works</a><a href="#measure">Accountability</a><a class="nav-cta" href="#contact">Talk with the City</a></nav>
     </div>
   </header>
 
@@ -196,6 +217,22 @@
       </div>
     </section>
 
+    <section id="evidence">
+      <div class="shell">
+        <div class="section-head reveal"><h2>Ventura has already identified the friction points.</h2><p class="section-intro">The proposed playbook responds to stakeholder feedback and the City's August 2026 Catalyst Projects update—not a hypothetical problem.</p></div>
+        <div class="evidence-grid reveal">
+          <article class="evidence-feature"><span class="number">STAKEHOLDER SIGNAL</span><strong>47.6%</strong><h3>said slow approval timelines are Ventura's biggest development barrier.</h3><p>That points to coordination and predictability as the first design problem to solve—not a bigger incentive package.</p></article>
+          <article class="evidence-feature"><span class="number">STAKEHOLDER SIGNAL</span><strong>76.2%</strong><h3>said a predictable timeline is very important.</h3><p>Only 9.5% placed the same priority on financial incentives or fee reductions.</p></article>
+          <article class="evidence-feature"><span class="number">STAKEHOLDER SIGNAL</span><strong>81%</strong><h3>said an informal feasibility meeting would be very helpful.</h3><p>Early problem-solving can identify requirements before a formal application creates avoidable rework.</p></article>
+        </div>
+        <div class="evidence-bottom reveal">
+          <div><div class="eyebrow">What residents want to see</div><p class="large-copy">A Catalyst project should help repair vacant or run-down buildings, fit Ventura's local character, and support locally owned businesses—not simply move faster.</p></div>
+          <div class="resident-list"><span>60.9% · Revitalize vacant or run-down buildings</span><span>53.1% · Fit Ventura's local character</span><span>51.6% · Support locally owned small businesses</span></div>
+        </div>
+        <p class="source-note">Source note: City of Ventura Catalyst Projects stakeholder survey, roundtable feedback, August 2026 staff report, and project update video. Percentages shown here are from the group meeting notes and should be checked against the City's original materials before final publication.</p>
+      </div>
+    </section>
+
     <section id="eligibility" class="eligibility">
       <div class="shell">
         <div class="section-head reveal"><h2>Who is the Catalyst lane for?</h2><p class="section-intro">Catalyst support is meant for projects with the potential to create substantial public value—not only for one preferred industry.</p></div>
@@ -216,6 +253,18 @@
           <article class="phase"><span class="time">3–6 MONTHS</span><h3>Align the route</h3><p>Hold a cross-department kickoff, create a review map, identify information gaps, and set target milestones.</p><small>Output: shared action plan</small></article>
           <article class="phase"><span class="time">6–12 MONTHS</span><h3>Coordinate review</h3><p>Maintain regular check-ins, track handoffs, communicate decisions and next steps, and escalate blockers when needed.</p><small>Output: visible status record</small></article>
           <article class="phase"><span class="time">12+ MONTHS</span><h3>Evaluate & improve</h3><p>Compare baseline and Catalyst projects, gather feedback, and recommend what should become a standard City practice.</p><small>Output: annual performance readout</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell playbook">
+        <div class="reveal"><div class="eyebrow">The day-to-day playbook</div><h2>Make the concierge model work for development.</h2><p class="section-intro">Ventura has already used a single point of contact to coordinate special-event and film permitting. Catalyst can adapt that proven idea for complex development projects.</p></div>
+        <div class="playbook-list reveal">
+          <div class="play"><span>01</span><div><h3>Start with a feasibility meeting</h3><p>Before formal submission, the project team meets with the coordinator and relevant departments to identify site, infrastructure, entitlement, and community questions.</p></div></div>
+          <div class="play"><span>02</span><div><h3>Use the four-part staff rubric</h3><p>Review projects for catalytic impact, strategic alignment, catalyst need, and readiness. Use the rubric to support consistent judgment—not to force unlike projects into a false ranking.</p></div></div>
+          <div class="play"><span>03</span><div><h3>Coordinate, do not bypass</h3><p>The coordinator maintains a shared action plan, makes existing expedited review options visible, and escalates blockers while preserving every required review and public decision.</p></div></div>
+          <div class="play"><span>04</span><div><h3>Track promises after approval</h3><p>Follow project-specific commitments over time—jobs, investment, infrastructure, local business participation, or other stated benefits—so residents can see whether the project delivered.</p></div></div>
         </div>
       </div>
     </section>
