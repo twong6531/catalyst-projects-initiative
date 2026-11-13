@@ -77,6 +77,17 @@
     .audience-card strong { display:block; font-family:var(--mono); font-size:11px; color:var(--coral-dark); margin-bottom:30px; }
     .audience-card h3 { font-size:22px; margin-bottom:10px; }
     .audience-card p { color:var(--ink-soft); font-size:14px; margin:0; }
+    .package-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .package-item { border-top:3px solid var(--coral); padding:20px 4px 0; }
+    .package-item span { font-family:var(--mono); font-size:11px; color:var(--coral-dark); }
+    .package-item h3 { font-size:18px; margin:18px 0 8px; }
+    .package-item p { color:var(--ink-soft); font-size:13px; margin:0; }
+    .team-strip { background:var(--sand); }
+    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); }
+    .team-card { background:var(--sand); padding:22px; }
+    .team-card strong { display:block; font-size:18px; }
+    .team-card span { display:block; margin-top:8px; color:var(--coral-dark); font-family:var(--mono); font-size:11px; }
+    .team-card p { color:var(--ink-soft); font-size:13px; margin:14px 0 0; }
     .strategy-panel-image { width:100%; height:150px; object-fit:cover; border-radius:12px; margin:0 0 20px; opacity:.92; }
     .strategy-panel .image-credit { color:rgba(255,255,255,.55); margin:-14px 0 18px; }
     .route-card h2 { font-family: var(--serif); font-size: 31px; font-weight: 500; max-width: 320px; margin-bottom: 28px; }
@@ -187,7 +198,7 @@
       section { padding:68px 0; }
       .section-head, .closing-grid { display:block; }
       .section-intro { margin-top:20px; }
-      .explain-grid, .qualify-grid, .evidence-grid, .audience-grid { grid-template-columns:1fr; }
+      .explain-grid, .qualify-grid, .evidence-grid, .audience-grid, .package-grid, .team-grid { grid-template-columns:1fr; }
       .evidence-bottom, .playbook, .strategy-grid, .change-grid { grid-template-columns:1fr; gap:42px; }
       .quick-summary-grid { grid-template-columns:1fr; }
       .explain { min-height:unset; }
@@ -351,6 +362,18 @@
       </div>
     </section>
 
+    <section>
+      <div class="shell">
+        <div class="section-head reveal"><h2>The first-year package is intentionally simple.</h2><p class="section-intro">Ventura can start with tools it can manage now, then add technology or incentives only where the pilot shows a real need.</p></div>
+        <div class="package-grid reveal">
+          <article class="package-item"><span>01 / PUBLIC GUIDE</span><h3>One clear webpage</h3><p>Explain eligibility, assistance, steps, timelines, the interest form, checklist, and frequently asked questions.</p></article>
+          <article class="package-item"><span>02 / EARLY HELP</span><h3>30-day kickoff</h3><p>Meet early with the right departments and give the project team a written list of requirements and next steps.</p></article>
+          <article class="package-item"><span>03 / SHARED STATUS</span><h3>Simple project tracker</h3><p>Show the current stage, responsible department, outstanding information, and next action. First assess VenturaOPS.</p></article>
+          <article class="package-item"><span>04 / ACCOUNTABILITY</span><h3>Monthly check-ins</h3><p>Review progress, surface blockers, record decisions, and report appropriate milestones and community benefits.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section id="measure">
       <div class="shell measure-wrap">
         <div class="reveal"><div class="eyebrow">Accountability by design</div><h2>If it matters, the City should be able to see it.</h2></div>
@@ -366,6 +389,17 @@
           <details><summary>Does every project in a priority industry qualify?</summary><p>No. Industry is one possible signal, not an automatic qualification. The program should stay flexible and focus on measurable economic or community benefit.</p></details>
           <details><summary>What happens if a project gets stuck?</summary><p>The lead contact documents the blocker, brings the right departments together, and escalates unresolved issues through a defined internal path—without promising an outcome that the City cannot control.</p></details>
           <details><summary>How could Ventura start without a large new budget?</summary><p>Begin with a published intake, a staff playbook, a named coordinator, recurring interdepartmental check-ins, and a simple status tracker. Technology and incentives can be added after the pilot proves where they create value.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-strip">
+      <div class="shell">
+        <div class="section-head reveal"><h2>A cross-disciplinary student team.</h2><p class="section-intro">The proposal combines real estate, finance, public policy, civil engineering, market research, and grant-writing perspectives.</p></div>
+        <div class="team-grid reveal">
+          <article class="team-card"><strong>Danna Acevedo</strong><span>REAL ESTATE DEVELOPMENT</span><p>Market research, comparable analysis, valuation, lease analysis, and transaction support.</p></article>
+          <article class="team-card"><strong>Nora Gamini</strong><span>REAL ESTATE + BUSINESS FINANCE</span><p>Acquisitions, asset management, advisory, and project feasibility perspective.</p></article>
+          <article class="team-card"><strong>Trevor Wong</strong><span>PUBLIC POLICY + CIVIL ENGINEERING</span><p>Public policy, public administration, grant writing, and infrastructure perspective.</p></article>
         </div>
       </div>
     </section>
