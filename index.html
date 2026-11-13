@@ -93,6 +93,20 @@
     .play > span { font-family:var(--mono); color:var(--coral-dark); font-size:12px; padding-top:4px; }
     .play h3 { font-size:19px; letter-spacing:-.02em; margin-bottom:5px; }
     .play p { color:var(--ink-soft); margin:0; font-size:14px; }
+    .strategy-strip { background:var(--ink); color:var(--white); }
+    .strategy-strip .section-head h2 { color:var(--white); }
+    .strategy-strip .section-intro { color:rgba(255,255,255,.72); }
+    .strategy-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:18px; }
+    .strategy-panel { border:1px solid rgba(255,255,255,.2); border-radius:var(--radius); padding:26px; background:rgba(255,255,255,.06); }
+    .strategy-panel h3 { font-size:22px; margin-bottom:12px; }
+    .strategy-panel p { color:rgba(255,255,255,.72); font-size:14px; margin:0; }
+    .strategy-panel ul { list-style:none; padding:0; margin:22px 0 0; display:grid; gap:11px; }
+    .strategy-panel li { border-top:1px solid rgba(255,255,255,.15); padding-top:11px; font-size:13px; color:rgba(255,255,255,.86); }
+    .strategy-panel li::before { content:'↗'; color:#f5d2a4; margin-right:9px; }
+    .pilot-card { background:#f2e9d9; color:var(--ink); border-radius:var(--radius); padding:26px; }
+    .pilot-card h3 { font-family:var(--serif); font-size:34px; font-weight:500; margin-bottom:10px; }
+    .pilot-card p { color:var(--ink-soft); font-size:14px; margin:0; }
+    .pilot-card strong { display:block; font-family:var(--mono); color:var(--coral-dark); font-size:12px; margin-bottom:28px; }
     .principles { display:grid; grid-template-columns: .9fr 1.1fr; gap:70px; align-items:start; }
     .principles h2 { font-family: var(--serif); font-size: clamp(40px, 5vw, 62px); font-weight: 500; }
     .principles-list { border-top: 1px solid var(--line); }
@@ -150,7 +164,7 @@
       .section-head, .closing-grid { display:block; }
       .section-intro { margin-top:20px; }
       .explain-grid, .qualify-grid, .evidence-grid { grid-template-columns:1fr; }
-      .evidence-bottom, .playbook { grid-template-columns:1fr; gap:42px; }
+      .evidence-bottom, .playbook, .strategy-grid { grid-template-columns:1fr; gap:42px; }
       .explain { min-height:unset; }
       .timeline { grid-template-columns:1fr 1fr; gap:28px 0; border-top:0; }
       .phase { border-top:1px solid var(--ink); padding-top:20px; }
@@ -167,7 +181,7 @@
   <header class="topbar">
     <div class="shell topbar-inner">
       <a class="brand" href="#top" aria-label="Catalyst Projects Initiative home"><span class="seal">V</span><span>City of Ventura<br><small style="font-weight:500;color:var(--ink-soft)">Catalyst Projects Initiative</small></span></a>
-      <nav aria-label="Main navigation"><a href="#why">Why it matters</a><a href="#evidence">What Ventura heard</a><a href="#process">How it works</a><a href="#measure">Accountability</a><a class="nav-cta" href="#contact">Talk with the City</a></nav>
+      <nav aria-label="Main navigation"><a href="#why">Why it matters</a><a href="#strategy">Strategy context</a><a href="#evidence">What Ventura heard</a><a href="#process">How it works</a><a href="#measure">Accountability</a><a class="nav-cta" href="#contact">Talk with the City</a></nav>
     </div>
   </header>
 
@@ -202,6 +216,17 @@
           <article class="explain"><span class="number">02 / COORDINATION</span><h3>One shared path</h3><p>Departments coordinate key reviews, surface conflicts earlier, and use milestones that make progress visible to everyone.</p></article>
           <article class="explain"><span class="number">03 / TRUST</span><h3>One accountable record</h3><p>Projects receive clearer expectations—not a free pass. Public requirements, decision authority, and community input remain visible.</p></article>
         </div>
+      </div>
+    </section>
+
+    <section id="strategy" class="strategy-strip">
+      <div class="shell">
+        <div class="section-head reveal"><h2>The Catalyst pilot fits Ventura's 2025–2030 economic strategy.</h2><p class="section-intro">The City does not need a separate economic-development idea. It needs an operating system that turns existing priorities into a usable project pathway.</p></div>
+        <div class="strategy-grid reveal">
+          <article class="strategy-panel"><h3>Why this matters now</h3><p>Ventura has limited room for greenfield development, so the strongest opportunities may come from reinvesting in places that already exist.</p><ul><li>Redevelop vacant and underused commercial properties</li><li>Modernize outdated retail and industrial space</li><li>Attract employers that create more local jobs</li><li>Improve visitor spending and overnight tourism</li><li>Make City processes more predictable for applicants</li></ul></article>
+          <article class="pilot-card"><strong>RECOMMENDED STARTING POINT</strong><h3>A one-year pilot for up to three projects.</h3><p>Publish the eligibility criteria, assign a coordinator, hold a 30-day kickoff, create a simple status record, and measure the results before expanding the program.</p></article>
+        </div>
+        <p class="source-note" style="color:rgba(255,255,255,.58)">Source note: City of Ventura Economic Development Strategy, 2025–2030 Vibrant Ventura Vision, as summarized in group meeting notes. Strategy claims should be checked against the adopted report before final publication.</p>
       </div>
     </section>
 
