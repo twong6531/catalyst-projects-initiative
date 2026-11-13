@@ -55,6 +55,10 @@
     .hero-note { display:flex; align-items:center; gap:10px; margin-top:20px; color:var(--ink-soft); font-size:12px; }
     .dot { width:8px; height:8px; border-radius:50%; background:var(--sea); box-shadow:0 0 0 5px rgba(44,123,120,.13); }
     .route-card { background: var(--ink); color: var(--white); border-radius: 24px; padding: 25px; box-shadow: var(--shadow); transform: rotate(1.5deg); }
+    .hero-image { width:calc(100% + 50px); height:155px; object-fit:cover; margin:-25px -25px 24px; border-radius:24px 24px 0 0; display:block; filter:saturate(.82) contrast(.96); }
+    .image-credit { display:block; color:rgba(255,255,255,.55); font-size:10px; margin-top:9px; }
+    .strategy-panel-image { width:100%; height:150px; object-fit:cover; border-radius:12px; margin:0 0 20px; opacity:.92; }
+    .strategy-panel .image-credit { color:rgba(255,255,255,.55); margin:-14px 0 18px; }
     .route-card h2 { font-family: var(--serif); font-size: 31px; font-weight: 500; max-width: 320px; margin-bottom: 28px; }
     .route-line { position:relative; padding-left: 34px; display:grid; gap: 21px; }
     .route-line:before { content:""; position:absolute; left:8px; top:12px; bottom:12px; width:1px; background: rgba(255,255,255,.28); }
@@ -189,13 +193,15 @@
     <section class="hero">
       <div class="shell hero-grid">
         <div>
-          <div class="eyebrow">A clearer path for high-impact projects</div>
-          <h1>Good projects should not get lost in the process.</h1>
-          <p class="hero-copy">Ventura's Catalyst Projects Initiative is a proposed, coordinated way to help significant development, business expansion, redevelopment, and investment projects move through City Hall with clarity—without skipping public review or community priorities.</p>
+          <div class="eyebrow">A simpler way to move important projects forward</div>
+          <h1>Good projects should not get stuck in City Hall.</h1>
+          <p class="hero-copy">Ventura wants to support projects that create jobs, bring investment, improve older properties, and benefit the community. Our proposal is simple: give each important project one City contact, a clear list of steps, and regular updates—while keeping all required public and safety reviews in place.</p>
           <div class="actions"><a class="button button-primary" href="#process">See the process <span aria-hidden="true" style="margin-left:8px">↓</span></a><a class="button button-quiet" href="#eligibility">Who qualifies?</a></div>
           <div class="hero-note"><span class="dot"></span>Designed to be practical within the City's existing capacity</div>
         </div>
         <aside class="route-card" aria-label="The proposed project route">
+          <img class="hero-image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Aerial_view_of_the_pier%2C_Ventura%2C_California_LCCN2013631292.tiff/lossy-page1-960px-Aerial_view_of_the_pier%2C_Ventura%2C_California_LCCN2013631292.tiff.jpg" alt="Aerial view of Ventura Pier and the coastline" />
+          <span class="image-credit">Image: Carol M. Highsmith / Wikimedia Commons · Public domain</span>
           <div class="kicker" style="color:#f5d2a4">The proposed route</div>
           <h2>One front door. Shared milestones. No shortcuts.</h2>
           <div class="route-line">
@@ -210,7 +216,7 @@
 
     <section id="why">
       <div class="shell">
-        <div class="section-head reveal"><h2>Make the City easier to navigate—while keeping the public process intact.</h2><p class="section-intro">The initiative responds to a simple tension: valuable projects need speed and certainty, while Ventura needs review, transparency, and accountability.</p></div>
+        <div class="section-head reveal"><h2>Ventura can make the process easier without cutting corners.</h2><p class="section-intro">Developers need clear answers and realistic timelines. Residents need to know that traffic, water, safety, neighborhood character, and other concerns will still be taken seriously.</p></div>
         <div class="explain-grid reveal">
           <article class="explain"><span class="number">01 / CLARITY</span><h3>One front door</h3><p>A designated City contact helps project teams understand who is involved, what information is needed, and where to go next.</p></article>
           <article class="explain"><span class="number">02 / COORDINATION</span><h3>One shared path</h3><p>Departments coordinate key reviews, surface conflicts earlier, and use milestones that make progress visible to everyone.</p></article>
@@ -221,9 +227,9 @@
 
     <section id="strategy" class="strategy-strip">
       <div class="shell">
-        <div class="section-head reveal"><h2>The Catalyst pilot fits Ventura's 2025–2030 economic strategy.</h2><p class="section-intro">The City does not need a separate economic-development idea. It needs an operating system that turns existing priorities into a usable project pathway.</p></div>
+        <div class="section-head reveal"><h2>Ventura already knows what problems it wants to solve.</h2><p class="section-intro">The City’s economic strategy is about helping local businesses grow, bringing in new investment, creating more jobs, supporting tourism, and making City processes work better.</p></div>
         <div class="strategy-grid reveal">
-          <article class="strategy-panel"><h3>Why this matters now</h3><p>Ventura has limited room for greenfield development, so the strongest opportunities may come from reinvesting in places that already exist.</p><ul><li>Redevelop vacant and underused commercial properties</li><li>Modernize outdated retail and industrial space</li><li>Attract employers that create more local jobs</li><li>Improve visitor spending and overnight tourism</li><li>Make City processes more predictable for applicants</li></ul></article>
+          <article class="strategy-panel"><img class="strategy-panel-image" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Downtown_Ventura%2C_Ventura%2C_United_States_%28Unsplash%29.jpg/960px-Downtown_Ventura%2C_Ventura%2C_United_States_%28Unsplash%29.jpg" alt="Downtown Ventura streetscape" /><span class="image-credit">Image: Jamie Brown / Wikimedia Commons · CC0</span><h3>Why this matters now</h3><p>Ventura has limited room for new construction, so the strongest opportunities may come from reinvesting in places that already exist.</p><ul><li>Redevelop vacant and underused commercial properties</li><li>Modernize outdated retail and industrial space</li><li>Attract employers that create more local jobs</li><li>Improve visitor spending and overnight tourism</li><li>Make City processes more predictable for applicants</li></ul></article>
           <article class="pilot-card"><strong>RECOMMENDED STARTING POINT</strong><h3>A one-year pilot for up to three projects.</h3><p>Publish the eligibility criteria, assign a coordinator, hold a 30-day kickoff, create a simple status record, and measure the results before expanding the program.</p></article>
         </div>
         <p class="source-note" style="color:rgba(255,255,255,.58)">Source note: City of Ventura Economic Development Strategy, 2025–2030 Vibrant Ventura Vision, as summarized in group meeting notes. Strategy claims should be checked against the adopted report before final publication.</p>
@@ -244,7 +250,7 @@
 
     <section id="evidence">
       <div class="shell">
-        <div class="section-head reveal"><h2>Ventura has already identified the friction points.</h2><p class="section-intro">The proposed playbook responds to stakeholder feedback and the City's August 2026 Catalyst Projects update—not a hypothetical problem.</p></div>
+        <div class="section-head reveal"><h2>Here is what people told the City.</h2><p class="section-intro">The program is based on feedback from developers, business owners, residents, and City staff.</p></div>
         <div class="evidence-grid reveal">
           <article class="evidence-feature"><span class="number">STAKEHOLDER SIGNAL</span><strong>47.6%</strong><h3>said slow approval timelines are Ventura's biggest development barrier.</h3><p>That points to coordination and predictability as the first design problem to solve—not a bigger incentive package.</p></article>
           <article class="evidence-feature"><span class="number">STAKEHOLDER SIGNAL</span><strong>76.2%</strong><h3>said a predictable timeline is very important.</h3><p>Only 9.5% placed the same priority on financial incentives or fee reductions.</p></article>
@@ -272,7 +278,7 @@
 
     <section id="process">
       <div class="shell">
-        <div class="section-head reveal"><h2>A practical path from first conversation to measurable result.</h2><p class="section-intro">The first version can launch as a lightweight playbook, using existing staff coordination before new technology or major funding is required.</p></div>
+        <div class="section-head reveal"><h2>What would actually happen?</h2><p class="section-intro">We recommend a small pilot for up to three projects. The City can test the idea, learn what works, and expand only if the results are useful.</p></div>
         <div class="timeline reveal">
           <article class="phase"><span class="time">0–3 MONTHS</span><h3>Screen & scope</h3><p>Receive a project intake, test eligibility, name a lead contact, and identify the departments and outside partners involved.</p><small>Output: Catalyst project brief</small></article>
           <article class="phase"><span class="time">3–6 MONTHS</span><h3>Align the route</h3><p>Hold a cross-department kickoff, create a review map, identify information gaps, and set target milestones.</p><small>Output: shared action plan</small></article>
@@ -284,10 +290,10 @@
 
     <section>
       <div class="shell playbook">
-        <div class="reveal"><div class="eyebrow">The day-to-day playbook</div><h2>Make the concierge model work for development.</h2><p class="section-intro">Ventura has already used a single point of contact to coordinate special-event and film permitting. Catalyst can adapt that proven idea for complex development projects.</p></div>
+        <div class="reveal"><div class="eyebrow">The simple playbook</div><h2>One person helps everyone stay on the same page.</h2><p class="section-intro">Ventura has already used this “concierge” approach for special events and film permits. We recommend adapting it for complex development projects.</p></div>
         <div class="playbook-list reveal">
           <div class="play"><span>01</span><div><h3>Start with a feasibility meeting</h3><p>Before formal submission, the project team meets with the coordinator and relevant departments to identify site, infrastructure, entitlement, and community questions.</p></div></div>
-          <div class="play"><span>02</span><div><h3>Use the four-part staff rubric</h3><p>Review projects for catalytic impact, strategic alignment, catalyst need, and readiness. Use the rubric to support consistent judgment—not to force unlike projects into a false ranking.</p></div></div>
+          <div class="play"><span>02</span><div><h3>Use four simple questions</h3><p>Does the project create a meaningful benefit? Does it fit Ventura's plans and character? Does it truly need extra coordination? Is the project team ready to move?</p></div></div>
           <div class="play"><span>03</span><div><h3>Coordinate, do not bypass</h3><p>The coordinator maintains a shared action plan, makes existing expedited review options visible, and escalates blockers while preserving every required review and public decision.</p></div></div>
           <div class="play"><span>04</span><div><h3>Track promises after approval</h3><p>Follow project-specific commitments over time—jobs, investment, infrastructure, local business participation, or other stated benefits—so residents can see whether the project delivered.</p></div></div>
         </div>
