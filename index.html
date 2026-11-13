@@ -70,6 +70,13 @@
     .change-card h3 { font-size:22px; margin-bottom:13px; }
     .change-card ul { margin:0; padding-left:18px; color:var(--ink-soft); font-size:14px; }
     .change-card li + li { margin-top:8px; }
+    .audience-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+    .audience-card { background:var(--white); padding:26px; min-height:220px; }
+    .audience-card:nth-child(2) { background:var(--mint); }
+    .audience-card:nth-child(3) { background:#f2e9d9; }
+    .audience-card strong { display:block; font-family:var(--mono); font-size:11px; color:var(--coral-dark); margin-bottom:30px; }
+    .audience-card h3 { font-size:22px; margin-bottom:10px; }
+    .audience-card p { color:var(--ink-soft); font-size:14px; margin:0; }
     .strategy-panel-image { width:100%; height:150px; object-fit:cover; border-radius:12px; margin:0 0 20px; opacity:.92; }
     .strategy-panel .image-credit { color:rgba(255,255,255,.55); margin:-14px 0 18px; }
     .route-card h2 { font-family: var(--serif); font-size: 31px; font-weight: 500; max-width: 320px; margin-bottom: 28px; }
@@ -180,7 +187,7 @@
       section { padding:68px 0; }
       .section-head, .closing-grid { display:block; }
       .section-intro { margin-top:20px; }
-      .explain-grid, .qualify-grid, .evidence-grid { grid-template-columns:1fr; }
+      .explain-grid, .qualify-grid, .evidence-grid, .audience-grid { grid-template-columns:1fr; }
       .evidence-bottom, .playbook, .strategy-grid, .change-grid { grid-template-columns:1fr; gap:42px; }
       .quick-summary-grid { grid-template-columns:1fr; }
       .explain { min-height:unset; }
@@ -305,6 +312,17 @@
           <article class="qualify"><span class="tag">QUALIFYING SIGNAL 02</span><h3>Place-based revitalization</h3><p>Redevelopment or adaptive reuse that helps activate an underused site, corridor, district, or strategic area.</p></article>
           <article class="qualify"><span class="tag">QUALIFYING SIGNAL 03</span><h3>Community benefit</h3><p>A project that advances public priorities through services, amenities, infrastructure, housing, sustainability, or other measurable benefits.</p></article>
           <article class="qualify"><span class="tag">QUALIFYING SIGNAL 04</span><h3>Strategic fit</h3><p>Projects may connect to Ventura's business strengths—from healthcare and technology to advanced manufacturing, the port, and the blue economy.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="section-head reveal"><h2>What this would mean for each group.</h2><p class="section-intro">The same program can make the process clearer for applicants, more accountable for the City, and easier for residents to understand.</p></div>
+        <div class="audience-grid reveal">
+          <article class="audience-card"><strong>FOR DEVELOPERS</strong><h3>Less guessing</h3><p>One contact, an early meeting, a clearer list of requirements, and regular updates about what is happening next.</p></article>
+          <article class="audience-card"><strong>FOR RESIDENTS</strong><h3>More confidence</h3><p>Projects still face the same rules and public review, while the City tracks whether promised jobs, investment, and community benefits actually happen.</p></article>
+          <article class="audience-card"><strong>FOR CITY STAFF</strong><h3>Fewer surprises</h3><p>A shared project plan makes it easier to see who is responsible, identify delays early, and coordinate departments before problems grow.</p></article>
         </div>
       </div>
     </section>
